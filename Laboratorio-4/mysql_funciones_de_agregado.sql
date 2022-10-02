@@ -194,11 +194,11 @@ CREATE TABLE IF NOT EXISTS libros(
 
 -- 5.1) Obtener la cantidad de libros de cada editorial
 
-SELECT IFNULL(editorial,'Anónima') editorial, COUNT(1) AS CantidadDeLibros FROM libros GROUP BY editorial;
+SELECT IFNULL(editorial,'Anónima') editorial, COUNT(1) AS cantidad_de_libros FROM libros GROUP BY editorial;
 
 -- 5.2) Conocer el total en dinero de los libros agrupados por editorial
 
-SELECT IFNULL(editorial,'Anónima') editorial, SUM(precio) FROM libros GROUP BY editorial;
+SELECT IFNULL(editorial,'Anónima') editorial, SUM(precio) AS total_dinero FROM libros GROUP BY editorial;
 
 -- 5.3) Obtenemos el máximo y mínimo valor de los libros agrupados por editorial
 
