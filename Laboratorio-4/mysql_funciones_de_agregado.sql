@@ -254,11 +254,9 @@ SELECT SalesOrderID, SUM(OrderQty) AS AmountOrderQty FROM SalesOrderDetail GROUP
 
  USE adventureworks;
 
--- No me sale
-
-SELECT ProductSubcategoryID, COUNT(1) AS CountListPrice FROM Product 
-GROUP BY ProductSubcategoryID HAVING COUNT(ListPrice) < 150;
-SELECT * FROM Product;
+SELECT ProductSubcategoryID, COUNT(ListPrice) AS AcountListPrice FROM Product 
+WHERE ListPrice < 150 AND ProductSubcategoryID IS NOT NULL 
+GROUP BY ProductSubcategoryID HAVING COUNT(ListPrice) >= 2 ORDER BY ProductSubcategoryID;
 
 /*
 
@@ -273,4 +271,5 @@ SELECT * FROM Product;
 
  USE adventureworks;
 
--- No me sale
+SELECT ProductSubcategoryID, COUNT(1) AS AcountProductSubcategory, AVG(ListPrice) AS AverageListPrice FROM Product 
+WHERE ProductSubcategoryID IS NOT NULL AND ListPrice > 70 GROUP BY ProductSubcategoryID HAVING AVG(ListPrice) > 300 ORDER BY ProductSubcategoryID;
