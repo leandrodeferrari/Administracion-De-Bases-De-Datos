@@ -85,7 +85,7 @@ SELECT CONCAT_WS(' ', FirstName, LastName) AS FirstNameLastName FROM Person.Pers
 USE AdventureWorks2019
 GO
 
-SELECT Name FROM Production.Product WHERE Name LIKE'%[0-9]'
+SELECT Name FROM Production.Product WHERE Name LIKE '%[0-9]'
 
 /* 
 
