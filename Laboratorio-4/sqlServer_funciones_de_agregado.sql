@@ -273,7 +273,7 @@ SELECT SalesOrderID, SUM(OrderQty) AS AmountOrderQty FROM Sales.SalesOrderDetail
 USE AdventureWorks2019
 GO
 
-SELECT ProductSubcategoryID, COUNT(ListPrice) AS AcountListPrice FROM Production.Product 
+SELECT ProductSubcategoryID, COUNT(1) AS AcountListPrice FROM Production.Product 
 WHERE ListPrice < 150 AND ProductSubcategoryID IS NOT NULL 
 GROUP BY ProductSubcategoryID HAVING COUNT(ListPrice) >= 2 ORDER BY ProductSubcategoryID
 

@@ -254,7 +254,7 @@ SELECT SalesOrderID, SUM(OrderQty) AS AmountOrderQty FROM SalesOrderDetail GROUP
 
  USE adventureworks;
 
-SELECT ProductSubcategoryID, COUNT(ListPrice) AS AcountListPrice FROM Product 
+SELECT ProductSubcategoryID, COUNT(1) AS AcountListPrice FROM Product 
 WHERE ListPrice < 150 AND ProductSubcategoryID IS NOT NULL 
 GROUP BY ProductSubcategoryID HAVING COUNT(ListPrice) >= 2 ORDER BY ProductSubcategoryID;
 
