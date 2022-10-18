@@ -82,8 +82,8 @@ USE adventureworks;
 
 SELECT EmployeeID, SalariedFlag FROM Employee 
 ORDER BY 
-CASE WHEN SalariedFlag = 1 THEN SalariedFlag END DESC,
-CASE WHEN SalariedFlag = 0 THEN SalariedFlag END ASC;
+CASE WHEN SalariedFlag = 1 THEN EmployeeID END DESC,
+CASE WHEN SalariedFlag = 0 THEN EmployeeID END ASC;
 
 /*
 
