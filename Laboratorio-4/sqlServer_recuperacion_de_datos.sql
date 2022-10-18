@@ -87,8 +87,8 @@ GO
 
 SELECT BusinessEntityID, SalariedFlag FROM HumanResources.Employee 
 ORDER BY 
-CASE WHEN SalariedFlag = 1 THEN SalariedFlag END DESC,
-CASE WHEN SalariedFlag = 0 THEN SalariedFlag END ASC
+CASE WHEN SalariedFlag = 1 THEN BusinessEntityID END DESC,
+CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END ASC
 
 /*
 
