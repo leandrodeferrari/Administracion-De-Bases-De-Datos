@@ -319,7 +319,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS productos SELECT Name, ListPrice, Color FRO
 
 USE adventureworks;
 
-CREATE TEMPORARY TABLE IF NOT EXISTS personas SELECT ContactID, FirstName, LastName FROM contact;
+CREATE TEMPORARY TABLE IF NOT EXISTS personas SELECT ContactID, FirstName, LastName FROM contact WHERE 1 = 2;
 
 /*
 
